@@ -6,7 +6,7 @@ import sampleImage from "../assets/calcu.png";
  * 프로젝트 페이지 컴포넌트
  * 사용자의 프로젝트들을 카드 형태로 보여주는 페이지
  */
-const ProjectsPage = () => {
+const ProjectsPage = ({ setCurrentPage }) => {
   const projects = [
     {
       title: "나의 프로젝트1",
@@ -24,18 +24,32 @@ const ProjectsPage = () => {
     },
   ];
 
+  const cardWrapperStyle = {
+    backgroundColor: "#000080", 
+    padding: "16px",
+    borderRadius: "10px",
+    margin: "10px 0",
+  };
+
   return (
-    <div className="projects-container">
+    <div className="projects-container" style={{ padding: "20px" }}>
       <h2>프로젝트</h2>
       <div className="project-grid">
         {projects.map((project, index) => (
-          <ProjectCard
+          <div
             key={index}
-            title={project.title}
-            description={project.description}
-            image={project.image}
-            link={project.link}
-          />
+            style={cardWrapperStyle}
+            onClick={() => {
+              if (index === 0) setCurrentPage("calculate"); 
+            }}
+          >
+            <ProjectCard
+              title={project.title}
+              description={project.description}
+              image={project.image}
+              link={project.link}
+            />
+          </div>
         ))}
       </div>
     </div>

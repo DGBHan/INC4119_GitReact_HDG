@@ -14,8 +14,10 @@ const LoginPage = ({ onLogin }) => {
     }
   };
 
+  const fontStyle = { fontFamily: '궁서' }; 
+
   return (
-    <div className="login-container">
+    <div className="login-container" style={fontStyle}>
       <h2>로그인</h2>
       <form onSubmit={handleSubmit}>
         <div>

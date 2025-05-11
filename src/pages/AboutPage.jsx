@@ -8,8 +8,9 @@ const AboutPage = () => {
   return (
     <div className="about-container">
       <h2>자기소개</h2>
-      <ProfileCard />
       <SkillsList skills={skills} />
+      <ProfileCard />
+      
     </div>
   );
 };

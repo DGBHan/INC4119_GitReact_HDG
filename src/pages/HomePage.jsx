@@ -16,10 +16,17 @@ const HomePage = () => {
       description: "저에게 연락하는 방법입니다.",
     },
     {
-      title: "여러분이 원하는",
-      description: "항목을 새로 만들어 보세요.",
+      title: "계산기",
+      description: "프로젝트에 계산기가 있습니다.",
     },
   ];
+
+const cardStyle = {
+    backgroundColor: "#e0f7fa", // 박스 색상 (연한 파랑)
+    padding: "20px",
+    borderRadius: "10px",
+    margin: "10px 0",
+  };
 
   return (
     <div className="home-container">
